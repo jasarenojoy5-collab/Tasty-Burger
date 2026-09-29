@@ -1,2 +1,3 @@
+import {useState} from "react";
 import "./app.css";
-export default function App(){return <div><header className="header"><a className="logo" href="#home">Tasty Burger<span>.</span></a></header><main id="home"><h1>Super delicious Burger in town!</h1><p>Freshly prepared burgers for every burger lover.</p></main></div>; }
+export default function App(){const[menuOpen,setMenuOpen]=useState(false);return <div><header className="header"><a className="logo" href="#home">Tasty Burger<span>.</span></a><button onClick={()=>setMenuOpen(!menuOpen)}>Menu</button><nav className={menuOpen?"active":""}><a href="#home">Home</a><a href="#about">About Us</a><a href="#food-menu">Shop</a></nav></header><main><section id="home"><h1>Super delicious Burger in town!</h1><button>Order Now</button></section><section id="about"><h2>About Us</h2><p>Fresh burgers, fries, and drinks.</p></section></main></div>; }
