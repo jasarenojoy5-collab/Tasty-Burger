@@ -1604,3 +1604,118 @@ textarea.input-field {
    */
 
   .hero {
+    min-height: 660px;
+    display: grid;
+    align-items: center;
+  }
+
+  .hero-subtitle { --fs-3: 3.2rem; }
+
+  .hero-title {
+    --fs-1: 7rem;
+    letter-spacing: -2.5px;
+  }
+
+  .hero-text { font-size: var(--fs-3); }
+
+  .hero-banner {
+    max-width: 45%;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+  }
+
+  .hero-img-bg { transform: scale(1.4) translate(20px, -20px); }
+
+
+
+  /**
+   * FOOD MENU
+   */
+
+  .food-menu-list { grid-template-columns: repeat(3, 1fr); }
+
+  .food-menu-card { height: 100%; }
+
+
+
+  /**
+   * CTA
+   */
+
+  .cta-img { transform: scale(1.4) translate(20px, 40px); }
+
+  .cta-banner .abs-img { left: -50px; }
+
+  :is(.cta, .delivery) .section-title { line-height: 1.2; }
+
+
+
+  /**
+   * BANNER
+   */
+
+  .banner-lg .banner-title {
+    --fs-1: 3.6rem;
+    letter-spacing: -2px;
+  }
+
+  :is(.banner-md, .banner-sm) .banner-title,
+  .banner-lg .banner-subtitle { --fs-2: 3.2rem; }
+
+
+
+  /**
+   * TESTIMONIALS
+   */
+
+  .testi-list { padding-block-end: 0; }
+
+
+
+  /**
+   * BLOG
+   */
+
+  .blog-list { grid-template-columns: repeat(3, 1fr); }
+
+  .blog-card .card-title { --fs-3: 2.2rem; }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1.6fr; }
+
+  .footer-form { margin-block-start: -170px; }
+
+
+
+  /**
+   * BACK TO TOP
+   */
+
+  .back-top-btn {
+    bottom: 20px;
+    right: 30px;
+  }
+
+}
+
+
+
+
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 1200px; }
