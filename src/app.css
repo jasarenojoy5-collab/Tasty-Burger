@@ -1719,3 +1719,117 @@ textarea.input-field {
    */
 
   .container { max-width: 1200px; }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero { min-height: 770px; }
+
+
+
+  /**
+   * PROMO
+   */
+  
+  .promo .promo-item { min-width: calc(33.333% - 6.667px); }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about .container { gap: 60px; }
+
+
+
+  /**
+   * CTA
+   */
+
+  .cta { --section-padding: 60px; }
+
+  .cta .section-title { max-width: 18ch; }
+
+
+
+  /**
+   * BANNER
+   */
+
+  .banner-md .banner-item-content { left: 55%; }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
+
+}
+/*-----------------------------------*\
+  #FOODIE CUSTOM CART / FAVORITES
+\*-----------------------------------*/
+.header-action-btn {
+  position: relative;
+  color: var(--btn-color);
+  font-size: 21px;
+  display: grid;
+  place-items: center;
+}
+.header-action-btn ion-icon { --ionicon-stroke-width: 45px; }
+.header-badge {
+  position: absolute;
+  top: -8px;
+  right: -9px;
+  min-width: 17px;
+  height: 17px;
+  padding-inline: 4px;
+  border-radius: 50%;
+  background: var(--cinnabar);
+  color: var(--white);
+  font-family: var(--ff-rubik);
+  font-size: 10px;
+  line-height: 17px;
+  text-align: center;
+}
+.header-action-btn:first-of-type ion-icon[name="heart"] { color: var(--cinnabar); }
+
+.promo-card-button {
+  width: 100%;
+  border: 0;
+  color: inherit;
+  text-align: center;
+  font: inherit;
+  cursor: pointer;
+}
+.promo-card-button .card-icon ion-icon { margin-inline: auto; font-size: 60px; color: var(--deep-saffron); }
+.promo-card-button:hover .card-icon ion-icon { color: var(--white); }
+
+.menu-product-image { object-fit: cover; }
+.menu-product-image { width: 100%; height: 100%; object-fit: contain; object-position: center; aspect-ratio: 1 / 1; border-radius: 4px; }
+
+.product-actions {
+  position: absolute;
+  top: calc(50% + 15px);
+  left: 50%;
+  display: flex;
+  gap: 9px;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: var(--transition-2);
+}
+.food-menu-card:hover .product-actions,
+.food-menu-card:focus-within .product-actions {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.food-icon-btn {
+  position: static;
+  transform: none !important;
+  opacity: 1;
+  min-width: 46px;
