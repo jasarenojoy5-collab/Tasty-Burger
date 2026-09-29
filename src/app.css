@@ -1833,3 +1833,118 @@ textarea.input-field {
   transform: none !important;
   opacity: 1;
   min-width: 46px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  --bg-color: var(--cinnabar);
+}
+.food-icon-btn ion-icon { font-size: 22px; }
+.food-icon-btn.favorite-btn.active { --bg-color: var(--deep-saffron); }
+.food-icon-btn.favorite-btn.active ion-icon { color: var(--white); }
+.empty-state { padding-block: 30px; font-family: var(--ff-rubik); }
+
+.favorites-section { text-align: center; }
+.favorites-section .section-title { margin-block: 10px 20px; }
+.favorites-section .section-text { max-width: 44ch; margin: 0 auto 40px; }
+.favorite-card { height: 100%; }
+.favorite-card .card-banner { overflow: hidden; }
+.favorite-card .card-banner img { width: 100%; height: 100%; object-fit: cover; }
+.favorite-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; }
+.favorite-card-head .card-title { margin-block: 8px 15px; }
+.favorite-remove { color: var(--cinnabar); font-size: 25px; }
+.favorite-card .price-wrapper { justify-content: space-between; align-items: center; }
+.favorite-cart-btn { display: inline-flex; align-items: center; gap: 7px; --height: 38px; --padding-inline: 16px; font-size: 1.2rem; }
+.favorites-empty {
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 50px 25px;
+  background: var(--white);
+  box-shadow: var(--shadow-2);
+}
+.favorites-empty ion-icon { display: block; margin: 0 auto 15px; font-size: 50px; color: var(--gray-x-11-gray); }
+.favorites-empty p { margin-bottom: 20px; }
+
+.footer-top .container { grid-template-columns: 1fr 1fr 1fr; }
+.footer-form { display: none; }
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-drawer {
+  width: min(440px, 100%);
+  height: 100%;
+  background: var(--white);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 30px rgba(0,0,0,.15);
+  animation: cartIn .3s ease-out;
+}
+@keyframes cartIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+.cart-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--cultured); }
+.cart-close { font-size: 28px; color: var(--rich-black-fogra-29); }
+.cart-items { flex: 1; overflow-y: auto; padding-block: 20px; }
+.cart-empty { height: 100%; display: grid; place-content: center; text-align: center; color: var(--spanish-gray); gap: 10px; }
+.cart-empty ion-icon { font-size: 50px; margin: auto; }
+.cart-item { display: grid; grid-template-columns: 72px 1fr auto; gap: 13px; align-items: center; padding-block: 14px; border-bottom: 1px solid var(--cultured); }
+.cart-item > img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; }
+.cart-item-info h3 { color: var(--rich-black-fogra-29); font-family: var(--ff-rubik); font-size: 1.5rem; margin-bottom: 4px; }
+.cart-item-info p { color: var(--deep-saffron); font-family: var(--ff-rubik); font-weight: var(--fw-600); }
+.quantity-controls { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.quantity-controls button { width: 27px; height: 27px; border: 1px solid var(--cultured); display: grid; place-items: center; }
+.quantity-controls ion-icon { font-size: 15px; }
+.cart-remove { color: var(--cinnabar); font-size: 19px; }
+.cart-footer { border-top: 1px solid var(--cultured); padding-top: 20px; }
+.cart-footer > div { display: flex; justify-content: space-between; font-family: var(--ff-rubik); margin-bottom: 15px; }
+.cart-footer strong { color: var(--deep-saffron); }
+.cart-footer .btn { width: 100%; }
+.cart-footer .btn:disabled { opacity: .5; cursor: not-allowed; }
+
+@media (min-width: 480px) {
+  .header-action-btn { display: grid; }
+}
+@media (max-width: 479px) {
+  .header-btn-group { gap: 12px; }
+  .header-action-btn { font-size: 19px; }
+  .cart-drawer { padding: 22px; }
+}
+
+/* keep footer responsive after removing the reservation form */
+.footer-top .container { grid-template-columns: 1fr; }
+@media (min-width: 550px) {
+  .footer-top .container { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 992px) {
+  .footer-top .container { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* preserve the original hero movement/animation */
+@keyframes heroBurgerFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .hero-img { animation: heroBurgerFloat 2.8s ease-in-out infinite; }
+  .hero-img-bg { animation: heroBurgerFloat 3.4s ease-in-out infinite reverse; }
+}
+
+/* keep action buttons at their natural/original size */
+.hero .btn,
+.cta .btn,
+.delivery .btn,
+.about .btn,
+.favorites-empty .btn {
+  width: max-content;
+}
+
+/* restore the original testimonial layout so review text isn't clipped */
+.testi-card .card-text { display: block; }
