@@ -801,3 +801,118 @@ body.active { overflow: hidden; }
   gap: 5px;
   font-family: var(--ff-rubik);
   font-weight: var(--fw-600);
+}
+
+.food-menu-card .price-text {
+  color: var(--cinnabar);
+  text-transform: uppercase;
+  padding-inline-end: 5px;
+}
+
+.food-menu-card .price { color: var(--deep-saffron); }
+
+.food-menu-card .del { color: var(--gray-x-11-gray); }
+
+
+
+
+
+/*-----------------------------------*\
+  #CTA
+\*-----------------------------------*/
+
+.cta {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta::before {
+  bottom: auto;
+  top: 0;
+  background-image: url("/assets/images/shape-grey.png");
+  transform: scaleY(-1);
+}
+
+.cta .section-title {
+  color: var(--white);
+  line-height: 1.5;
+  letter-spacing: -2px;
+  max-width: 17ch;
+  margin-inline: auto;
+}
+
+.cta .section-text {
+  color: var(--gainsboro);
+  margin-block: 25px 20px;
+}
+
+.cta .btn { margin-inline: auto; }
+
+.cta-banner {
+  position: relative;
+  aspect-ratio: 1 / 0.9;
+}
+
+.cta-img { transform: scale(1.3) translateY(60px); }
+
+.cta-banner .abs-img {
+  top: 50px;
+  left: 10px;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #DELIVERY
+\*-----------------------------------*/
+
+.delivery-content { margin-block-end: 40px; }
+
+.delivery .section-title {
+  max-width: 17ch;
+  line-height: 1.6;
+  letter-spacing: -2px;
+}
+
+.delivery .section-text { margin-block: 15px 25px; }
+
+.delivery-banner {
+  position: relative;
+  aspect-ratio: 1 / 0.86;
+}
+
+.delivery-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-80px);
+  transition: var(--transition-2);
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #TESTIMONIALS
+\*-----------------------------------*/
+
+.testi { text-align: center; }
+
+.testi .section-title { margin-block: 10px 20px; }
+
+.testi .section-text {
+  max-width: 44ch;
+  margin-inline: auto;
+  margin-block-end: 30px;
+}
+
+.testi-card {
+  background-color: var(--white);
+  padding: 40px;
+  text-align: left;
